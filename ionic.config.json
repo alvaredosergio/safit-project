@@ -1,0 +1,7 @@
+{
+  "name": "safitProject",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
