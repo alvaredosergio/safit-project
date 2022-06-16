@@ -47,4 +47,11 @@ export class Tab4Page {
         this.edad = res.Edad;
       });
     }
+
+    SignOut() {
+      return this.ngFireAuth.signOut().then(() => {
+        localStorage.removeItem('user');
+        this.router.navigate(['login']);
+      });
+    }
 }

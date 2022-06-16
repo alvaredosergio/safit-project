@@ -165,6 +165,11 @@ FacebookAuth() {
     console.log(doc.get(path.nombre))
   }
 
+  getDocumentSimple1<Usuario>(info: Usuario, enlace: string){
+    const referencia = this.angularFirestore.collection<Usuario>(enlace);
+    return referencia.doc(this.userData.uid).get(info);
+  }
+
   
 
 }

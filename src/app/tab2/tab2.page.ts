@@ -40,7 +40,7 @@ export class Tab2Page {
     this.usuarios = angularFirestore.collection('usuarios').valueChanges();
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
     const path = '/usuarios/' + localStorage.getItem('id');
     this.authService.getDocument<Usuario>(path).subscribe(res => {
       this.ruNombre = res.Rutinas.nombre;
@@ -53,18 +53,15 @@ export class Tab2Page {
 
 
   visualizarRutina() {
-    const path = '/usuarios/' + localStorage.getItem('id');
-    this.authService.getDocument<Usuario>(path).subscribe(res => {
-      if (res.Rutinas.nombre == "Rutina básica en casa") {
-        this.router.navigate(['rutina1']);
-      } else if(res.Rutinas.nombre == "Rutina intermedia gimnasio") {
-        this.router.navigate(['rutina2']);
-      } else if(res.Rutinas.nombre == "Rutina powerlifting") {
-        this.router.navigate(['rutina3']);
-      } else if(res.Rutinas.nombre == "Rutina perdida de peso") {
-        this.router.navigate(['rutina4']);
-      }
-    });
+    if (this.ruNombre == "Rutina básica en casa") {
+      this.router.navigate(['rutina1']);
+    } else if(this.ruNombre == "Rutina intermedia gimnasio") {
+      this.router.navigate(['rutina2']);
+    } else if(this.ruNombre == "Rutina powerlifting") {
+      this.router.navigate(['rutina3']);
+    } else if(this.ruNombre == "Rutina perdida de peso") {
+      this.router.navigate(['rutina4']);
+    } 
   }
 }
 
