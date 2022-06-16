@@ -66,12 +66,6 @@ export class Tab2Page {
       }
     });
   }
-
-  getDocumentSimple<Usuario>(path){
-    const doc: AngularFirestoreDocument<Usuario> = this.angularFirestore.doc(path);
-    console.log(doc.get(path, this))
-  }
-
 }
 
 
