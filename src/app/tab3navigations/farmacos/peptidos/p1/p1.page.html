@@ -1,0 +1,50 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/peptidos']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Péptidos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div style="align-items:center; text-align: center; justify-content: center;display: flex; margin-top: 1em;">
+    <img src="../../../../assets/img/f2.png" height="150em">
+  </div>
+
+  <p class="titulo" style="font-family: 'Mitr', sans-serif;font-size: 1em;">Factor de crecimiento pegilado</p>
+  <p class="texto">La transcripción del gen IGF-1 (factor de crecimiento insulinalike 1) genera sus 3 isoformas de ARNm:
+    IGF-1Ea, IGF-1Eb e IGF-1Ec (a menudo llamado también como MGF o factor de crecimiento de mecano). Esto significa,
+    IGF-1Ec es una variante de empalme de IGF-1, compartiendo una región madura idéntica, pero con un dominio E
+    diferente. IGF-1Ec se ha demostrado in vitro, así como in vivo para inducir el crecimiento y la hipertrofia en
+    músculo estimulado mecánicamente o dañado. Es naturalmente péptido endógeno, pero se puede producir también
+    sintéticamente.</p>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

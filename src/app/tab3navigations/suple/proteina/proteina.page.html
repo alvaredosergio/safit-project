@@ -1,0 +1,53 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/suple']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Suplementación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div style="align-items:center; text-align: center; justify-content: center;display: flex; margin-top: 1em;">
+    <img src="../../../assets/img/proteina.png" height="150em">
+  </div>
+
+  <p class="titulo" style="font-family: 'Mitr', sans-serif;font-size: 1em;">Proteína</p>
+  <p class="texto">Los tipos de proteínas se pueden definir según diferentes criterios, por eso no existe un sistema de
+    clasificación único para ellas. Estas pueden clasificarse según su forma, solubilidad, su composición química o su
+    origen.
+
+    - Según la forma. Las proteínas pueden ser fibrosas, globulares o mixtas.<br>
+    - Según la solubilidad. De acuerdo a la solubilidad de las proteínas, estas pueden ser globulares, fibrosas,
+    integrales de membrana e intrínsecamente desordenadas.<br>
+    - Según composición química. Estas pueden ser proteínas simples o conjugadas.<br>
+    - Según el origen. Las proteínas pueden ser de origen animal o vegetal.<br></p>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

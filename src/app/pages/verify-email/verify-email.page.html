@@ -1,0 +1,27 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <!-- Logo + nombre  -->
+  <div class="logo" style="line-height:1;">
+    <div style="align-items:center; text-align: center; justify-content: center;display: flex;">
+      <img src="../../../assets/img/sa-logo.png" height="60em">
+      <button (click)="save()" [routerLink]="['/login']" ion-button icon-only
+        style="position: absolute; left: 10px;border-radius: 50px;font-size: 27px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+    </div>
+    <p style="margin: auto; font-family: Coolvetica;font-size: 1em;">SaFIT</p>
+  </div>
+  <p style="font-family: 'Mitr', sans-serif;font-size: 1.5em;text-align:center">Verificación de E-mail</p>
+
+  <p style="font-family: 'Roboto Flex', sans-serif;margin: 1em; text-align: start;font-size: 0.9em;">Porfavor, compruebe
+    su email y haga click en el enlace para verificar su dirección de correo.</p>
+
+  <ion-button style="text-transform: none;" class="accesoButton" fill="block" type="submit"
+    (click)="authService.SendVerificationMail()">
+    Reenviar verificación de correo
+  </ion-button>
+</ion-content>

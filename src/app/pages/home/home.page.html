@@ -1,0 +1,45 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <!-- Logo + nombre  -->
+  <div class="logo" style="line-height:1; position: absolute; z-index: 10; margin-left: 45%;">
+    <div style="align-items:center; text-align: center; justify-content: center;">
+      <img src="../../../assets/img/sa-logo.png" height="40em">
+    </div>
+    <p style="margin: auto; font-family: Coolvetica;font-size: 0.8em;">SaFIT</p>
+  </div>
+
+  <ion-slides>
+    <ion-slide>
+      <img src="../../../assets/img/fitness2.webp" height="450px">
+      <h4>En el gimnasio o en casa, con o sin equipamiento</h4>
+      <p style="font-family: 'Roboto Flex', sans-serif;">Entrenamientos creados para adaptarse a cualquier situación y
+        acercarte a tus objetivos.</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../../assets/img/fitness3.webp  " height="450px">
+      <h4>Adaptar tu entrenamiento a tu vida diaria</h4>
+      <p style="font-family: 'Roboto Flex', sans-serif;">¿Solo tienes 15 minutos, quieres entrenar sin hacer ruido o no
+        puedes hacer Pushups esta semana? Hoy un workout
+        para cada caso</p>
+    </ion-slide>
+    <ion-slide>
+      <img src="../../../assets/img/fitness4.webp" height="450px">
+      <h4>IA + expertos en deporte, a tu servicio</h4>
+      <p style="font-family: 'Roboto Flex', sans-serif;">Un plan de entrenamiento personalizado, creado por tu Coach
+        digital con inteligencia artifical y un equipo de
+        expertos en deporte.</p>
+      <ion-button [routerLink]="['/gender']" style="margin-top: 6em; background-color: blue; border: solid 1px blue"
+        class="accesoButton" fill="clear">Empezar
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
+
+<ion-footer>
+  <a class="tengoCuenta" [routerLink]="['/login']">Ya tengo cuenta</a>
+</ion-footer>

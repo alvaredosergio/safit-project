@@ -1,0 +1,31 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <button [routerLink]="['/personaldata']" ion-button icon-only
+    style="position: absolute; left: 10px;border-radius: 50px;font-size: 27px; margin-top:2em;">
+    <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+  </button>
+
+  <h4 style="margin-top:5.5em;">Registrate para obtener todos los entrenamientos</h4>
+  <p style="font-family: 'Roboto Flex', sans-serif;margin: 1em; text-align: start;font-size: 0.9em;">Introduce tu correo
+    electrónico y elige tu contraseña para empezar.</p>
+
+  <hr style="margin-top: 2.5em; margin-bottom: auto;">
+
+  <form>
+    <ion-input type="text" autocapitalize="off" placeholder="Dirección de e-mail" #email required></ion-input>
+
+    <hr style="margin-top: auto; margin-bottom: auto;">
+
+    <ion-input type="password" autocapitalize="off" placeholder="Contraseña" #password required></ion-input>
+
+    <hr style="margin-top: auto; margin-bottom: auto;">
+
+    <ion-button style="margin-top: 6em; background-color: blue; border: solid 1px blue" class="accesoButton"
+      fill="clear" type="submit" (click)="signUp(email, password)" [routerLink]="['/firebase-register']">Registrarse</ion-button>
+  </form>
+
+</ion-content>

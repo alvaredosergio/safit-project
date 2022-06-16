@@ -1,0 +1,48 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/orales']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Prod. orales
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div style="align-items:center; text-align: center; justify-content: center;display: flex; margin-top: 1em;">
+    <img src="../../../../assets/img/f4.png" height="100em">
+  </div>
+
+  <p class="titulo" style="font-family: 'Mitr', sans-serif;font-size: 1em;">Citrato de clomifeno</p>
+  <p class="texto">El clomifeno se usa para inducir la ovulación (producción de óvulos) en las mujeres que no producen
+    óvulos, pero que desean quedar embarazadas. El clomifeno pertenece a una clase de medicamentos llamados estimulantes
+    ovulatorios. Funciona de igual manera que el estrógeno, una hormona femenina que hace que los ovarios produzcan
+    óvulos y se liberen.</p>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

@@ -1,0 +1,87 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/tabs/tab3']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Enciclopedia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button [routerLink]="['/e1']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../../assets/img/celulitis.jpeg'); background-size: 300px;">
+    <div>Celulitis</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e2']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/estiramiento.jpeg'); background-size: 350px;">
+    <div>Estiramiento</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e3']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/aislado.jpg'); background-size: 350px;">
+    <div>Ejericicios aislados</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e4']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/circuito.jpg'); background-size: 350px;">
+    <div>Entrenamiento circuito</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e5']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/negativa.jpg'); background-size: 380px;">
+    <div>Fase negativa</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e6']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/dropset.jpg'); background-size: 480px;">
+    <div>¿Qué es una dropset?</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e7']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/superset.jpg'); background-size: 380px;">
+    <div>¿Qué es una superserie?</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e8']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/hidratos.jpeg'); background-size: 480px;">
+    <div>Hidratos simples, complejos</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e9']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/intervalo.jpg'); background-size: 380px;">
+    <div>Intervalos entre series</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/e10']" color="none" class="elemento"
+    style="text-transform: none; background-image: url('../../assets/img/tiposcuerpo.jpg'); background-size: 350px;">
+    <div>Tipos de cuerpo</div>
+  </ion-button>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

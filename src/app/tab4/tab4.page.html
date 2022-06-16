@@ -1,0 +1,57 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1.2em;text-align:center">
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <p style="font-family: 'Mitr', sans-serif; font-size: 1.3em; text-align:center; margin-top:0em;">{{this.nombre}}</p>
+
+  <div style="align-items:center; text-align: center; justify-content: center;display: flex;">
+    <img src="../../assets/img/person-img.png" height="90em">
+  </div>
+
+  <p style="font-family: 'Roboto Flex', sans-serif; font-size: 1em; margin:0.8em;">Datos Generales:</p>
+
+  <div style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em;" class="metodoSesion" fill="clear">
+    <p style="position: absolute; left: 1.1em;">Sexo: <span style="font-weight: normal;">{{this.sexo}}</span></p>
+  </div>
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <div style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em;" class="metodoSesion" fill="clear">
+    <p style="position: absolute; left: 1.1em;">Edad: <span style="font-weight: normal;">{{this.edad}} años</span></p>
+  </div>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <div style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em;" class="metodoSesion" fill="clear">
+    <p style="position: absolute; left: 1.1em;">Estatura: <span style="font-weight: normal;">{{this.estatura}} cm</span></p>
+  </div>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <div style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em;" class="metodoSesion" fill="clear">
+    <p style="position: absolute; left: 1.1em;">Peso: <span style="font-weight: normal;">{{this.peso}} kg</span></p>
+  </div>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <div style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em;" class="metodoSesion" fill="clear">
+    <p style="position: absolute; left: 1.1em;">Objetivo: <span style="font-weight: normal;">{{this.objetivo}}</span></p>
+  </div>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-button style="text-transform: none; margin-top: 3em; background-color: rgb(147, 0, 0); border: solid 1px rgb(147, 0, 0);" class="accesoButton"
+      fill="clear" (click)="SignOut()">Cerrar sesión</ion-button>
+
+
+</ion-content>

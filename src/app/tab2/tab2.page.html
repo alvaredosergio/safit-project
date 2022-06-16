@@ -1,17 +1,38 @@
-<ion-header [translucent]="true">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 2
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1.2em;text-align:center">
+      Historial
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<div style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif; margin: 0.8em;">Rutina actual: </div>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title style="font-weight: bold;font-family: 'Mitr', sans-serif; color: white;">{{this.ruNombre}}</ion-card-title>
+    <hr>
+    <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">· Objetivo: {{this.ruObjetivo}}</ion-card-title>
+    <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">· Duración: {{this.ruDuracion}}</ion-card-title>
+    <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">· Equipamiento: {{this.ruEquipamiento}}</ion-card-title>
+    <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">· Lugar: {{this.ruLugar}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content style="font-family: 'Roboto Flex', sans-serif;">
+    <ion-button style="text-transform: none; margin-top: 1em; background-color: blue; border: solid 1px blue" class="accesoButton"
+    fill="clear" (click)="getDocumentSimple()">Detalles</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<hr style="margin-left: 1em; margin-right: 1em;">
+
+<div style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif; margin: 0.8em;">¿Aún no tienes rutina, o quieres cambiar la que tienes?</div>
+<ion-button style="text-transform: none; margin-top: 1em; margin-left: 8em;margin-right: 8em; background-color: blue; border: solid 1px blue" class="accesoButton"
+    fill="clear" [routerLink]="('/tabs/tab1')">Ver rutinas</ion-button>
+
 </ion-content>

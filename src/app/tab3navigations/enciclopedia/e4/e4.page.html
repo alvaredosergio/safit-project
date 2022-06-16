@@ -1,0 +1,50 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/enciclopedia']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Enciclopedia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="elemento"
+    style="text-transform: none; background-image: url('../../../assets/img/circuito.jpg'); background-size: 350px;">
+  </div>
+
+  <p class="titulo" style="font-family: 'Mitr', sans-serif;font-size: 1em;">Entrenamiento circuito</p>
+  <p class="texto">El circuito de entrenamiento corresponde a una estructura sistemática y organizada de entrenamiento
+    que se puede incluir dentro de la sesión, comprende la ejecución consecutiva de ejercicios interconectados en
+    estaciones sin o con descanso mínimo entre ellos hasta el término del último ejercicio, momento en el cuál se
+    descansa un período mayor, para volver a ejecutar hasta repetir un número determinado de series y luego pasar a otro
+    circuito o finalizar. La gama de ejercicios en las estaciones incluye equipo de resistencia, así como espacios asignados para trabajar con el propio peso corporal en gestos deportivos o
+    típicos de fitness (saltos, sentadillas, skipping, abdominales etc.).</p>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

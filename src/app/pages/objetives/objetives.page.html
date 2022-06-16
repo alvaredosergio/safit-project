@@ -1,0 +1,32 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <button [routerLink]="['/gender']" ion-button icon-only
+    style="position: absolute; left: 10px;border-radius: 50px;font-size: 27px; margin-top:2em;">
+    <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+  </button>
+
+  <h4 style="margin-top:5.5em;">¿Cuales es tu objetivo principal?</h4>
+  <p style="font-family: 'Roboto Flex', sans-serif;margin: 1em; text-align: start;font-size: 0.9em;">Selecciona el
+    objetivo para que el Coach pueda ayudarte a conseguirlos.</p>
+
+  <ion-button (click)="guardarObjetivo1()" [routerLink]="['/personaldata']" style="margin-top: 6em; background-color: blue; border: solid 1px blue"
+    class="accesoButton" fill="clear">Perder peso
+  </ion-button>
+
+  <ion-button (click)="guardarObjetivo2()" [routerLink]="['/personaldata']" style="background-color: blue; border: solid 1px blue"
+    class="accesoButton" fill="clear">Ganar  musculatura
+  </ion-button>
+
+  <ion-button  (click)="guardarObjetivo3()" [routerLink]="['/personaldata']" style="background-color: blue; border: solid 1px blue"
+    class="accesoButton" fill="clear">Aumentar fuerza
+  </ion-button>
+
+  <ion-button (click)="guardarObjetivo4()" [routerLink]="['/personaldata']" style="background-color: blue; border: solid 1px blue"
+    class="accesoButton" fill="clear">Mantener linea
+  </ion-button>
+
+</ion-content>

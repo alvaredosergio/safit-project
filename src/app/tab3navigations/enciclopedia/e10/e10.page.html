@@ -1,0 +1,49 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/enciclopedia']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Enciclopedia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="elemento"
+    style="text-transform: none; background-image: url('../../../assets/img/tiposcuerpo.jpg'); background-size: 350px;">
+  </div>
+
+  <p class="titulo" style="font-family: 'Mitr', sans-serif;font-size: 1em;">Tipos de cuerpo</p>
+  <p class="texto">Ectomorfo: delgado, con poca grasa y poco músculo. Tienen problemas para ganar peso.<br><br>
+    Endomorfo: mucha grasa y músculo, con una forma corporal más redonda que la de los ectomorfos. Ganan peso
+    fácilmente.<br><br>
+    Mesomorfo: atlético y musculoso, estos individuos ganan y pierden peso fácilmente.<br><br>Es importante conocer
+    nuestro tipo de cuerpo para aplcarlo a la hora de gestionar nuestros entrenamientos y nuestra dieta alimenticia.</p>
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

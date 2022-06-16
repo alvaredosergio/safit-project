@@ -1,17 +1,35 @@
-<ion-header [translucent]="true">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 3
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1.2em;text-align:center">
+      Manual
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <ion-button [routerLink]="['/ejercicios']" color="none" class="elemento" style="text-transform: none; background-image: url('../../assets/img/ejercicios.jpg'); background-size: 350px;">
+    <div>Ejercicios</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/alimentos']" color="none" class="elemento" style="text-transform: none; background-image: url('../../assets/img/alimentos.jpg'); background-size: 350px;">
+    <div>Alimentación</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/suple']" color="none" class="elemento" style="text-transform: none; background-image: url('../../assets/img/suplementacion.jpg'); background-size: 350px;">
+    <div>Suplementación</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/farmacos']" color="none" class="elemento" style="text-transform: none; background-image: url('../../assets/img/farmacos.jpg'); background-size: 350px;">
+    <div>Farmacología</div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/enciclopedia']" color="none" class="elemento" style="text-transform: none; background-image: url('../../assets/img/enciclopedia.jpg'); background-size: 300px;">
+    <div>Enciclopedia</div>
+  </ion-button>
 </ion-content>

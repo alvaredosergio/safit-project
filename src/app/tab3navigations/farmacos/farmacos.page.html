@@ -1,0 +1,72 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1em;text-align:center">
+      <button [routerLink]="['/tabs/tab3']" ion-button icon-only
+        style="border-radius: 50px;font-size: 27px; position: absolute; left: 10px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+      Farmacología
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-button [routerLink]="['/hormona']" style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em; margin-top: 1em;" class="metodoSesion" type="submit" fill="clear">
+    <img src="../../../assets/img/f1.png" height="40em" style="position: absolute; left: 0em;">
+    <p style="position: absolute; left: 3.2em;">Hormona somatotropina</p>
+    <ion-icon style="position: absolute; left: 15em;" name="chevron-forward-sharp" size="small"></ion-icon>
+  </ion-button>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-button [routerLink]="['/peptidos']" style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em" class="metodoSesion" type="submit" fill="clear">
+    <img src="../../../assets/img/f2.png" height="30em" style="position: absolute; left: 0em;">
+    <p style="position: absolute; left: 3.2em;">Péptidos</p>
+    <ion-icon style="position: absolute; left: 15em;" name="chevron-forward-sharp" size="small"></ion-icon>
+  </ion-button>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-button [routerLink]="['/inyectables']" style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em;" class="metodoSesion" type="submit" fill="clear">
+    <img src="../../../assets/img/f3.png" height="30em" style="position: absolute; left: 0em;">
+    <p style="position: absolute; left: 3.2em;">Productos inyectables</p>
+    <ion-icon style="position: absolute; left: 15em;" name="chevron-forward-sharp" size="small"></ion-icon>
+  </ion-button>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-button [routerLink]="['/orales']" style="text-transform: none; font-family: 'Roboto Flex', sans-serif; height: 3em" class="metodoSesion" type="submit" fill="clear">
+    <img src="../../../assets/img/f4.png" height="20em" style="position: absolute; left: 0em;">
+    <p style="position: absolute; left: 3.2em;">Productos orales</p>
+    <ion-icon style="position: absolute; left: 15em;" name="chevron-forward-sharp" size="small"></ion-icon>
+  </ion-button>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+
+</ion-content>
+
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="tab1" [routerLink]="['/tabs/tab1']">
+    <ion-icon name="barbell"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab2" [routerLink]="['/tabs/tab2']">
+    <ion-icon name="stats-chart"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab3" [routerLink]="['/tabs/tab3']">
+    <ion-icon style="color: white;" name="book"></ion-icon>
+  </ion-tab-button>
+
+  <ion-tab-button tab="tab4" [routerLink]="['/tabs/tab4']">
+    <ion-icon name="person"></ion-icon>
+  </ion-tab-button>
+</ion-tab-bar>

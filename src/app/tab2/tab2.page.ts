@@ -1,4 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from "../pages/shared/authentication-service";
+import { Router } from "@angular/router";
+import { userInfo } from 'os';
+import { Usuario } from '../pages/models/interfaces';
+import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { info } from 'console';
+import { Observable } from 'rxjs';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +14,64 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  nombre: string;
+  estatura: string;
+  peso: string;
+  sexo: string;
+  edad: string;
+  objetivo: string;
 
-  constructor() {}
+  ruNombre: string;
+  ruDuracion: string;
+  ruObjetivo: string;
+  ruLugar: string;
+  ruEquipamiento: string;
+
+
+  usuarios: Observable<any[]>;
+
+  constructor(public ngFireAuth: AngularFireAuth,
+    public database: AuthenticationService,
+    public authService: AuthenticationService,
+    public angularFirestore: AngularFirestore,
+    public afStore: AngularFirestore,
+    public router: Router,
+  ) {
+    this.usuarios = angularFirestore.collection('usuarios').valueChanges();
+  }
+
+  ngOnInit(): void {
+    const path = '/usuarios/' + localStorage.getItem('id');
+    this.authService.getDocument<Usuario>(path).subscribe(res => {
+      this.ruNombre = res.Rutinas.nombre;
+      this.ruDuracion = res.Rutinas.duracion;
+      this.ruObjetivo = res.Rutinas.objetivo;
+      this.ruLugar = res.Rutinas.lugar;
+      this.ruEquipamiento = res.Rutinas.equipamiento;
+    });
+  }
+
+
+  visualizarRutina() {
+    const path = '/usuarios/' + localStorage.getItem('id');
+    this.authService.getDocument<Usuario>(path).subscribe(res => {
+      if (res.Rutinas.nombre == "Rutina básica en casa") {
+        this.router.navigate(['rutina1']);
+      } else if(res.Rutinas.nombre == "Rutina intermedia gimnasio") {
+        this.router.navigate(['rutina2']);
+      } else if(res.Rutinas.nombre == "Rutina powerlifting") {
+        this.router.navigate(['rutina3']);
+      } else if(res.Rutinas.nombre == "Rutina perdida de peso") {
+        this.router.navigate(['rutina4']);
+      }
+    });
+  }
+
+  getDocumentSimple<Usuario>(path){
+    const doc: AngularFirestoreDocument<Usuario> = this.angularFirestore.doc(path);
+    console.log(doc.get(path, this))
+  }
 
 }
+
+

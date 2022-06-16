@@ -1,17 +1,72 @@
-<ion-header [translucent]="true">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Tab 1
+    <ion-title style="font-family: 'Mitr', sans-serif;font-size: 1.2em;text-align:center">
+      Entrenamientos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <img src="../../assets/img/rutina1.jpg" height="100em"/>
+    <ion-card-header>
+      <ion-card-title style="font-weight: bold;font-family: 'Mitr', sans-serif; color: white;">Rutina básica en casa</ion-card-title>
+      <hr>
+      <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">Mantener línea</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="font-family: 'Roboto Flex', sans-serif;">
+      Rutina de entrenamiento básica en casa enfocada en el aprendizaje y la progresión lineal.
+      <ion-button style="text-transform: none; margin-top: 1em; background-color: blue; border: solid 1px blue" class="accesoButton"
+      fill="clear" (click)="editarRutina1()">Añadir rutina</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/img/rutina2.jpeg" height="100em"/>
+    <ion-card-header>
+      <ion-card-title style="font-weight: bold;font-family: 'Mitr', sans-serif; color: white;">Rutina intermedia gimnasio</ion-card-title>
+      <hr>
+      <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">Ganancia muscular</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="font-family: 'Roboto Flex', sans-serif;">
+      Rutina para aquellos con algo de experiencia, y posibilidad de uso de gimnasio.
+      <ion-button style="text-transform: none; margin-top: 1em; background-color: blue; border: solid 1px blue" class="accesoButton"
+      fill="clear" (click)="editarRutina2()">Añadir rutina</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/img/rutina3.jpg" height="100em"/>
+    <ion-card-header>
+      <ion-card-title style="font-weight: bold;font-family: 'Mitr', sans-serif; color: white;">Rutina powerlifting</ion-card-title>
+      <hr>
+      <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">Aumentar fuerza</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="font-family: 'Roboto Flex', sans-serif;">
+      Rutina para usuario experimentado que su meta es batir records en ejercicios de fuerza.
+      <ion-button style="text-transform: none; margin-top: 1em; background-color: blue; border: solid 1px blue" class="accesoButton"
+      fill="clear" (click)="editarRutina3()">Añadir rutina</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img src="../../assets/img/rutina4.jpeg" height="100em"/>
+    <ion-card-header>
+      <ion-card-title style="font-weight: bold;font-family: 'Mitr', sans-serif; color: white;">Rutina perdida de peso</ion-card-title>
+      <hr>
+      <ion-card-title style="font-size: 1.2em;font-family: 'Roboto Flex', sans-serif;">Perder peso</ion-card-title>
+    </ion-card-header>
+    <ion-card-content style="font-family: 'Roboto Flex', sans-serif;">
+      Rutina enfocada ejercicios de resistencia, para quemar calorias y grasas y así bajar peso.
+      <ion-button style="text-transform: none; margin-top: 1em; background-color: blue; border: solid 1px blue" class="accesoButton"
+      fill="clear" (click)="editarRutina4()">Añadir rutina</ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>

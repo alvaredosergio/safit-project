@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../../../../../assets/fonts/coolvetica\ rg\ it.otf");
+}
+
+.elemento{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.7em; 
+    height: 5.6em;
+    padding-left: 1em;
+    border-radius: 0.4em;
+    box-shadow: 200px 20px 43px -37px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 200px 20px 43px -37px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 200px 20px 43px -37px rgba(0,0,0,0.75) inset;
+}
+
+.elemento div{
+    font-family: 'Roboto Flex', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.5em;
+    width: 11.25em;
+    font-weight: bold;
+}
+
+ion-button div{
+    font-family: 'Roboto Flex', sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 2.5em;
+    width: 11.25em;
+    font-weight: bold;
+    margin-left: 1em;
+}
+
+
+.metodoSesion {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: start;
+    border-radius: 0.2em;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+hr {
+    margin-left: 1em;
+    background-color: white;
+}
+
+.texto{
+    margin-left:  1em;
+    margin-right: 1em;
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+.titulo{
+    margin-left:  1em;
+    margin-right: 1em;
+}
+

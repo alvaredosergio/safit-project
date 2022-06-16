@@ -1,0 +1,24 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <button [routerLink]="['/home']" ion-button icon-only
+    style="position: absolute; left: 10px;border-radius: 50px;font-size: 27px; margin-top:2em;">
+    <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+  </button>
+
+  <h4 style="margin-top:5.5em;">¿Cuál de las siguientes opciones te describe mejor?</h4>
+  <p style="font-family: 'Roboto Flex', sans-serif;margin: 1em; text-align: start;font-size: 0.9em;">Tu Coach utiliza
+    esta información para diseñar el plan de
+    entrenamiento más efectivo para ti.</p>
+
+  <ion-button style="text-transform: none;" (click)="guardarMujer()" [routerLink]="['/objetives']"
+    style="margin-top: 3em; background-color: blue; border: solid 1px blue;" class="accesoButton" fill="clear">Mujer
+  </ion-button>
+  <ion-button style="text-transform: none;" (click)="guardarHombre()" [routerLink]="['/objetives']"
+    style=" background-color: blue; border: solid 1px blue;" class="accesoButton" fill="clear">Hombre
+  </ion-button>
+
+</ion-content>

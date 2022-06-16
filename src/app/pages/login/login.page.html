@@ -1,0 +1,49 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <!-- Logo + nombre  -->
+  <div class="logo" style="line-height:1;">
+    <div style="align-items:center; text-align: center; justify-content: center;display: flex;">
+      <img src="../../../assets/img/sa-logo.png" height="60em">
+      <button [routerLink]="['/home']" ion-button icon-only
+        style="position: absolute; left: 10px;border-radius: 50px;font-size: 27px;">
+        <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+      </button>
+    </div>
+    <p style="margin: auto; font-family: Coolvetica;font-size: 1em;">SaFIT</p>
+  </div>
+
+  <!-- "Inicia sesión"  -->
+  <p style="font-family: 'Mitr', sans-serif;font-size: 1.5em;text-align:center">Inicia sesión</p>
+
+  <!-- Formas de iniciar sesión (facebook,google,apple)  -->
+
+  <ion-button style="text-transform: none;" class="metodoSesion" color="white" type="submit" (click)="authService.FacebookAuth()">
+    <ion-icon style="color: #1877F2; position: absolute; left: -3px; font-size: 25px;" name="logo-facebook"></ion-icon>
+    <p class="">Inicia sesión con Facebook</p>
+  </ion-button>
+
+  <ion-button  style="text-transform: none;" class="metodoSesion" color="white" type="submit" (click)="authService.GoogleAuth()">
+    <img src="../../../assets/img/google-logo.svg" height="23em" style="position: absolute; left: -3px;">
+    <p class="">Inicia sesión con Google</p>
+  </ion-button>
+
+  <hr style="margin-top: 2.5em; margin-bottom: auto;">
+
+  <ion-input type="text" autocapitalize="off" placeholder="Dirección de e-mail" #email required></ion-input>
+  
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-input type="password" placeholder="Contraseña" #password required></ion-input>
+
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-button style="text-transform: none;" class="accesoButton" type="submit" fill="block" (click)="logIn(email, password)" expand="block">Acceder
+    con correo electrónico</ion-button>
+
+  <a class="olvidarPass" [routerLink]="['/password-reset']">Olvidaste tu contraseña</a>
+
+</ion-content>

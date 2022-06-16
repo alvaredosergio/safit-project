@@ -1,0 +1,32 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+</style>
+
+<ion-content>
+  <button [routerLink]="['/objetives']" ion-button icon-only
+    style="position: absolute; left: 10px;border-radius: 50px;font-size: 27px; margin-top:2em;">
+    <ion-icon name="chevron-back-sharp" size="small"></ion-icon>
+  </button>
+
+  <h4 style="margin-top:5.5em;">¿Cual es tu edad, peso y estatura?</h4>
+  <p style="font-family: 'Roboto Flex', sans-serif;margin: 1em; text-align: start;font-size: 0.9em;">Es necesario
+    conocer tus medidas para
+    maximizar la personalización de tus entrenamientos y objetivos.</p>
+
+  <hr style="margin-top: 2.5em; margin-bottom: auto;">
+  <ion-input name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
+  <hr style="margin-top: auto; margin-bottom: auto;">
+  <ion-input name="edad" id="edad" placeholder="Edad" [(ngModel)]="edad"></ion-input>
+  <hr style="margin-top: auto; margin-bottom: auto;">
+  <ion-input name="estatura" id="estatura" placeholder="Estatura (en centímetros)" [(ngModel)]="estatura"></ion-input>
+  <hr style="margin-top: auto; margin-bottom: auto;">
+  <ion-input name="peso" id="peso" placeholder="Peso (en kilogramos)" [(ngModel)]="peso"></ion-input>
+  <hr style="margin-top: auto; margin-bottom: auto;">
+
+  <ion-button [routerLink]="['/registration']" style="margin-top: 6em; background-color: blue; border: solid 1px blue"
+    class="accesoButton" fill="clear" type="submit" (click)="guardarDatos()">Siguiente</ion-button>
+
+
+
+</ion-content>
